@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 1px solid aqua
 }
 :root {
     --primary-color: rgb(55, 51, 84);
