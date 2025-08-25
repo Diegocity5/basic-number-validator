@@ -10,3 +10,6 @@ checkBtn.onclick = ()=>{
   }
 };
 
+clearBtn.onclick = ()=>{
+  resultsDiv.textContent = '';
+}
