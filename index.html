@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="theme-color" content="rgb(55, 51, 84)"/>
+    <meta name="description" content="Telephone Number Validator for US"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Telephone Number Validator - US</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <main id="wrapper">
+        <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freecodecamp" />
+        <h1>Telephone Number <br/> Validator</h1>
+        <div id="phone-container">
+            <section id="phone-input-section">
+                <label for="user-input">Enter a Phone Number:</label>
+                <input type="text" class="input-number" id="user-input" aria-label="Your Phone Number"/>
+                <div id="results-div">
+                    <!-- <p class="valid-number">Valid Number: 1 (501)-555-5152</p>
+                    <p class="invalid-number">Invalid Number: 123-456-7890</p> -->
+                </div>
+            </section>
+            <div id="phone-buttons">
+                <button type="button" id="check-btn" class="btn" aria-label="Check your phone number">Check</button>
+                <button type="button" id="clear-btn" class="btn" aria-label="Clear your numbers">Clear</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./src/js/main.js"></script>
+</body>
+</html>

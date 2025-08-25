@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: rgb(55, 51, 84);
+    --secondary-color: #ccc;
+    --white-color: white;
+    --black-color: black;
+    --list-numbers-size: 1.5rem;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+img {
+    width: 60%;
+    height: auto;
+}
+h1 {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+}
+#wrapper {
+    width: 100%;
+    max-width: 320px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 2.5% 0%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.3%;
+}
+#phone-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black-color);
+    padding: 30px 3% 10px;
+    position: relative;
+    border-radius: 10px;
+}
+#phone-container::after {
+    content: '🇺🇸';
+    width: 15px;
+    height: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    right: 50%;
+}
+#phone-input-section {
+    width: 100%;
+    height: 55vh;
+    background-color: var(--secondary-color);
+    color: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0.3%;
+}
+label {
+    margin-bottom: 3%;
+    font-size: var(--list-numbers-size);
+}
+.input-number {
+    width: 90%;
+    height: 10.5%;
+    border-radius: 4.5px;
+    text-align: center;
+    font-size: 2rem;
+    border: none;
+    outline: 1.5px solid var(--black-color);
+}
+#results-div {
+    width: 100%;
+    display: block;
+    overflow-y: auto;
+    padding: 12px;
+    margin-top: 15px;
+}
+#results-div p {
+    text-align: left;
+    padding: 1.1%;
+    font-size: var(--list-numbers-size);
+}
+#phone-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2.5%;
+}
+.btn {
+    width: 35%;
+    cursor: pointer;
+    background-image: linear-gradient(to top, grey 10%, var(--white-color) 70%);
+    border: 3px solid var(--secondary-color);
+    padding: 1.5% 0;
+}
+
+/* Different colors for valid and invalid numbers */
+.valid-number {
+    color: rgb(46, 118, 46);
+}
+.invalid-number {
+    color:  rgb(114, 47, 47);
+}
+
+@media screen and (min-width: 600px){
+    :root {
+        --list-numbers-size: 2.2rem;
+    }
+}
+
