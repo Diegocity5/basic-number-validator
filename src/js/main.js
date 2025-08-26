@@ -23,7 +23,7 @@ clearBtn.onclick = ()=>{
 
 //Funcion encargada de validar el numero de telefono.
 const validateFormatePhoneNumber  = (str)=> {
-const  patternNumbers = //;
+const  patternNumbers = /1 [\d]{3}-[\d]{3}-[\d]{4}/;
 return patternNumbers.test(str);
 }
 
