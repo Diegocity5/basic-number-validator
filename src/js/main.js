@@ -4,8 +4,21 @@ const userInput = document.getElementById('user-input');
 const checkBtn = document.getElementById('check-btn');
 const clearBtn = document.getElementById('clear-btn');
 
-//Manejando el evento click del boton "Check Number".
-checkBtn.onclick = ()=>{
+//Manejando el evento de presion de tecla abajo "Enter".
+document.addEventListener('keypress', (event)=> {
+  if(event.code === "Enter") {
+    checking();
+  }
+})
+
+//Manejando el evento click del boton "CheckBtn".
+checkBtn.onclick = ()=> checking();
+
+//Manejando el evento click del boton "Clear".
+clearBtn.onclick = ()=> resultsDiv.textContent = '';
+
+
+const checking = () =>{
   const value = userInput.value.trim();
   if(value === ''){
     alert('Please provide a phone number');
@@ -14,10 +27,7 @@ checkBtn.onclick = ()=>{
     const isValid = validateFormatePhoneNumber(value);
     renderNumbers(value, isValid);
   }
-};
-
-//Manejando el evento click del boton "Clear".
-clearBtn.onclick = ()=> resultsDiv.textContent = '';
+}
 
 //Funcion encargada de validar el numero de telefono.
 const validateFormatePhoneNumber  = (str)=> {
