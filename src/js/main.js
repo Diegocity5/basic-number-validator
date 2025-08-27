@@ -17,13 +17,11 @@ checkBtn.onclick = ()=>{
 };
 
 //Manejando el evento click del boton "Clear".
-clearBtn.onclick = ()=>{
-  resultsDiv.textContent = '';
-}
+clearBtn.onclick = ()=> resultsDiv.textContent = '';
 
 //Funcion encargada de validar el numero de telefono.
 const validateFormatePhoneNumber  = (str)=> {
-const  patternNumbers = /^1?\s?(\([\d]{3}\)|[\d]{3})[-\s]?[\d]{3}[-\s]?[\d]{4}$/gm;
+const  patternNumbers = /^1?\s?(\([\d]{3}\)|[\d]{3})[-\s]?[\d]{3}[-\s]?[\d]{4}$/;
 return patternNumbers.test(str);
 }
 
